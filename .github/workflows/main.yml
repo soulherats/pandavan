@@ -1,6 +1,8 @@
 name: GitHub Actions Demo
 on:
   workflow_dispatch:
+  push:
+    branches: master
 jobs:
   my-job:
     name: My Job
@@ -14,4 +16,4 @@ jobs:
         sudo apt-get -y install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd fakeroot \
         cpio git python-docutils gettext automake autopoint texinfo build-essential help2man \
         pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget
-        git clone git@bitbucket.org:padavan/rt-n56u.git
+        git clone https://bitbucket.org/padavan/rt-n56u.git

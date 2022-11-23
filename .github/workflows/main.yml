@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print a greeting
-        uses: sudosubin/git-clone-action@v1.0.1
+        uses: peterromag/git-clone-action@v1.0.1
         with:
          repository: 'padavan/rt-n56u.git'
          platform: 'bitbucket.org'

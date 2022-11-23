@@ -9,5 +9,13 @@ jobs:
       - name: Print a greeting
         uses: sudosubin/git-clone-action@v1
         with:
-        repository: 'padavan/rt-n56u.git'
-        platform: 'bitbucket.org'
+         repository: 'padavan/rt-n56u.git'
+         platform: 'bitbucket.org'
+      - name: Print a greetings
+        env:
+          MY_VAR: Hi there! My name is
+          FIRST_NAME: Mona
+          MIDDLE_NAME: The
+          LAST_NAME: Octocat
+        run: |
+          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.

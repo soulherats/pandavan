@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print a greeting
+    - uses: sudosubin/git-clone-action@v1
+      with:
+        repository: 'padavan/rt-n56u.git'
+        platform: 'bitbucket.org'
       env:
         MY_VAR: Hi there! My name is
         FIRST_NAME: Mona

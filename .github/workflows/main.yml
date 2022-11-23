@@ -9,7 +9,7 @@ jobs:
       - name: Print a greeting
         uses: peterromag/git-clone-action@v1.0.1
         with:
-         repository: 'padavan/rt-n56u.git'
+         repository: 'padavan/rt-n56u'
          platform: 'bitbucket.org'
       - name: Print a greetings
         env:

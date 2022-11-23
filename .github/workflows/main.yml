@@ -6,16 +6,12 @@ jobs:
     name: My Job
     runs-on: ubuntu-latest
     steps:
-      - name: Print a greeting
-        uses: peterromag/git-clone-action@v1.0.1
-        with:
-         repository: 'padavan/rt-n56u'
-         platform: 'bitbucket.org'
-      - name: Print a greetings
-        env:
-          MY_VAR: Hi there! My name is
-          FIRST_NAME: Mona
-          MIDDLE_NAME: The
-          LAST_NAME: Octocat
-        run: |
-          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+     - name: Initialization environment
+       env:
+        DEBIAN_FRONTEND: noninteractive
+       run: |
+        sudo apt-get update
+        sudo apt-get -y install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd fakeroot \
+        cpio git python-docutils gettext automake autopoint texinfo build-essential help2man \
+        pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget
+        git clone git@bitbucket.org:padavan/rt-n56u.git

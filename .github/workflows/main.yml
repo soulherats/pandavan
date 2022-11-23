@@ -11,6 +11,8 @@ jobs:
       with:
         repository: 'padavan/rt-n56u.git'
         platform: 'bitbucket.org'
+        
+     - name: Print a greetings
       env:
         MY_VAR: Hi there! My name is
         FIRST_NAME: Mona
